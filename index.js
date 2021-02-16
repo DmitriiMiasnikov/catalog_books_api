@@ -36,7 +36,7 @@ const start = async () => {
       useUnifiedTopology: true
     })
 
-    app.listen(config.get('port'), () => {
+    app.listen(process.env.PORT || config.get('port'), () => {
       console.log('server started...')
     })
   } catch (e) {
